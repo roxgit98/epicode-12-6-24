@@ -38,6 +38,10 @@ const personaggi = () => {
           a.classList.add("btn-primary");
           a.textContent = "scarta";
 
+          a.addEventListener("click", (event) => {
+            event.target.closest(".col").remove();
+          });
+
           contenitore.appendChild(col);
           col.appendChild(card);
           card.appendChild(img);
